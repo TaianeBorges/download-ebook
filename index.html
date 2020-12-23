@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" a href="style.css">
+    
+    <!--<script type="text/javascript" src="cron.js"></script>-->
+   <script type="text/javascript" src="con.php"></script>
+    <title>Ebook</title>
+</head>
+<body class="ladingPage">
+   <!-- <header class="year" class="year"></header>
+   <header id="count" class="count">
+       <header class="time">
+           <h2 id="days">00</h2>
+           <small>dias</small>
+       </header>
+       <header class="time">
+        <h2 id="hours">00</h2>
+        <small>horas</small>
+    </header>
+    <header class="time">
+        <h2 id="minutes">00</h2>
+        <small>minutos</small>
+    </header>
+    <header class="time">
+        <h2 id="seconds">00</h2>
+        <small>segundos</small>
+    </header>
+   </header> -->
+
+
+
+
+
+   <!-- <section id="logo">
+       
+    <h1>|||capitãoMKT</h1>
+
+   </section> -->
+    <section class="principal">
+        <h1 class="h1"> Baixe agora o ebook Gratuito:</h1>
+        
+        <!-- <hr> -->
+        <!-- <h3 class="h3">ebook grátis</h3> -->
+        <img src="./img/ebook-bg.png" alt="imagem do Ebook">
+        <div class="content">
+            <h2>Como começar no Marketing Digital?</h2>
+            <li>Estrátegias</li>
+            <li>Tráfego Orgânico</li>
+            <li>Tráfego Pago</li>
+            <li>Funil</li>
+            <li>Gatilhos Mentais</li>
+        </div>
+    </section>
+    <section class="contact">
+        
+    </section>
+    <form id="form" action="form.php" method="post" autocomplete="on" name="dadoscliente">
+        
+
+        <fieldset class="only-form">
+            <h2 class="titulo-form"> Preencha com os campos abaixo para obter gratuitamente o material desejado.</h2>
+            
+            <label>Nome:</label>
+            <input class="input-form" type="text" alt="nome" name="name" id="name" maxlength="50"><br>
+            <label>E-mail:</label>
+            <input class="input-form" type="email" alt="email" name="email" id="email" maxlength="50"><br>
+            
+            <label>Cargo:</label>
+            <input class="input-form" type="text" alt="cargo" name="cargo" id="cargo" maxlength="25"><br>
+            <label>Empresa:</label>
+            <input class="input-form" type="text" alt="empresa" name="empresa" id="empresa" maxlength="25"><br>
+            
+            <label>Você tem interesse em fazer um curso online?</label>
+            <!-- <input class="input-time" type="radio" alt="curso" nome="curso" id="curso" maxlength="1">
+            <select>sim</select> 
+            <select>nao</select> -->
+            <input type="submit" alt="baixar" id="btn-download" value="Download Ebook">
+    </fieldset>
+    </form>
+<script>
+function mascara(i){
+   
+   var v = i.value;
+   
+   if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+      i.value = v.substring(0, v.length-1);
+      return;
+   }
+   
+   i.setAttribute("maxlength", "14");
+   if (v.length == 3 || v.length == 7) i.value += ".";
+   if (v.length == 11) i.value += "-";
+
+}
+
+function dadoscorretos(){
+
+    if(document.dadoscliente.name.value == "" || document.dadoscliente.name.value.length >8)
+{
+alert("preencha o campo nome de forma correta!");
+document.dadoscliente.name.focus();
+return false;
+
+}
+}
+
+// function mascara(entradauser){
+//     var name = entradauser.value;
+
+//     if(name===3){
+//         name += "-";
+//         nameupper = name.toUpperCase();
+//         document.forms[0].name = nameupper;
+//         return true
+        
+//     }
+// }
+
+</script>
+</body>
+</html>
